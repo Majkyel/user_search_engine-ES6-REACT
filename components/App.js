@@ -1,3 +1,5 @@
+import UserList from './UserList';
+
 class App extends React.Component {
     
     constructor(props) {

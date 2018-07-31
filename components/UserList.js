@@ -1,3 +1,5 @@
+import User from './User';
+
 class UserList extends React.Component {
     
     get users() {
