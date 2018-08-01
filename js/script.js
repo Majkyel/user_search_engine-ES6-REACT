@@ -45,8 +45,8 @@ class App extends React.Component {
 class UserList extends React.Component {
     
     get users() {
-        return this.props.users.map(user => <User key={user.id} user={user}/> 
-    );}
+        return this.props.users.map(user => <User key={user.id} user={user}/>);
+    }
     
     render() {
         return (
@@ -61,9 +61,9 @@ class User extends React.Component {
     
     render() {
         return (
-            <div className={"image_container"}>
-                <img src={this.props.user.avatar_url} className={"image"}/>
-                <a href={this.props.user.html_url} target="_blank" className={"user_login"}>{this.props.user.login}</a>
+            <div className="image_container">
+                <img src={this.props.user.avatar_url} className="image"/>
+                <a href={this.props.user.html_url} target="_blank" className="user_login">{this.props.user.login}</a>
             </div>
         );
     }
