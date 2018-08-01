@@ -23,14 +23,17 @@ class App extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className={"container"}>
+                <h1 className={"header"}>GITHUB SEARCH ENGINE</h1>
                 <form onSubmit={event => this.onSubmit(event)}>
-                    <label htmlFor="searchText">Search by user name</label>
+                    <label htmlFor="searchText" className={"label"}>Search by user name</label>
                     <input
                         type="text"
-                        id="seachText"
+                        id="searchText"
                         onChange={event => this.onChangeHandle(event)}
                         value={this.state.searchText}
+                        className={"input"}
+                        placeholder="write something and press enter"
                     />
                 </form>
                 <UserList users={this.state.users}/>
@@ -58,9 +61,9 @@ class User extends React.Component {
     
     render() {
         return (
-            <div>
-                <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
-                <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
+            <div className={"image_container"}>
+                <img src={this.props.user.avatar_url} className={"image"}/>
+                <a href={this.props.user.html_url} target="_blank" className={"user_login"}>{this.props.user.login}</a>
             </div>
         );
     }

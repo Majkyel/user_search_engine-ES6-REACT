@@ -50,7 +50,12 @@ var App = function (_React$Component) {
 
             return React.createElement(
                 "div",
-                null,
+                { className: "container" },
+                React.createElement(
+                    "h1",
+                    { className: "header" },
+                    "GITHUB SEARCH ENGINE"
+                ),
                 React.createElement(
                     "form",
                     { onSubmit: function onSubmit(event) {
@@ -58,16 +63,18 @@ var App = function (_React$Component) {
                         } },
                     React.createElement(
                         "label",
-                        { htmlFor: "searchText" },
+                        { htmlFor: "searchText", className: "label" },
                         "Search by user name"
                     ),
                     React.createElement("input", {
                         type: "text",
-                        id: "seachText",
+                        id: "searchText",
                         onChange: function onChange(event) {
                             return _this3.onChangeHandle(event);
                         },
-                        value: this.state.searchText
+                        value: this.state.searchText,
+                        className: "input",
+                        placeholder: "write something and press enter"
                     })
                 ),
                 React.createElement(UserList, { users: this.state.users })
@@ -122,11 +129,11 @@ var User = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 "div",
-                null,
-                React.createElement("img", { src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
+                { className: "image_container" },
+                React.createElement("img", { src: this.props.user.avatar_url, className: "image" }),
                 React.createElement(
                     "a",
-                    { href: this.props.user.html_url, target: "_blank" },
+                    { href: this.props.user.html_url, target: "_blank", className: "user_login" },
                     this.props.user.login
                 )
             );
