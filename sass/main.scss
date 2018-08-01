@@ -1,0 +1,77 @@
+$bodyBgColor: gainsboro;
+$containerBgColor: brown;
+$headerBgColor: darkgray;
+$headerBorder: black;
+$headerTextShadowColor: white;
+$formBgColor: sandybrown;
+$formBorderColor: black;
+$inputBgColor: bisque;
+$imageContainerBorder: black;
+$imageContainerBgColor: sandybrown;
+$imageBorderColor: black;
+$userNameColor: black;
+
+*{box-sizing: border-box};
+
+body {
+    padding: 10px;
+    background-color: $bodyBgColor;
+    .container {
+        padding: 10px;
+        background-color: $containerBgColor;
+        min-height: 95vh;
+        .header {
+            text-align: center;
+            font-size: 50px;
+            background-color: $headerBgColor;
+            border: 1px solid $headerBorder;
+            margin: 15px 50px;
+            text-shadow: 0 0 10px $headerTextShadowColor;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            margin: 15px 50px;
+            background-color: $formBgColor;
+            border: 1px solid $formBorderColor;
+            .label {
+                font-size: 40px;
+                padding: 0 20px;
+                font-style: italic;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+            .input {
+                font-size: 25px;
+                padding: 5px;
+                width: 40%;
+                margin: auto;
+                text-align: center;
+                background-color: $inputBgColor;
+            }
+        }
+        .image_container {
+            display: flex;
+            max-width: 200px;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid $imageContainerBorder;
+            background-color: $imageContainerBgColor;
+            text-align: center;
+            .image {
+                margin: 5px auto;
+                background-size: cover;
+                width: 100%;
+                border: 1px solid $imageBorderColor;
+            }
+            .user_login {
+                text-decoration: none;
+                color: $userNameColor;
+                font-weight: bold;
+            }
+        }
+    }
+}
