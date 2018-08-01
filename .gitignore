@@ -37,7 +37,7 @@ node_modules/
 jspm_packages/
 css/
 .babelrc
-js/script-compiled.js
+js/build.js
 
 # TypeScript v1 declaration files
 typings/
