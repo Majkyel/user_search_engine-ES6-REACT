@@ -14,4 +14,4 @@ class UserList extends React.Component {
         );
     }
 }
-export default User;
+export default UserList;
